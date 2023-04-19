@@ -1,0 +1,87 @@
+// @mixin domieszka(){
+//   color: aqua;
+//   text-transform: lowercase;
+// }
+
+// .text {
+//   font-size: 20px;
+//   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+//   color: darkblue;
+// }
+
+
+
+// .footer__copyright{
+// @extend .text;
+//   font-size: 22px;
+//   text-transform: uppercase;
+//   @include domieszka()
+// }
+
+// // selektor zastępczy --> placeholders --> sicha klasa
+// .new__class{
+//   @extend %nazwa-selektora-zastepczego;
+// }
+
+// %nazwa-selektora-zastepczego{
+// display: flex;
+// flex-direction: row;
+// flex-wrap: nowrap;
+// }
+
+
+
+// interpolacja
+// $default-size: 10;
+// $class-large-font:xxl;
+
+// p.#{$class-large-font}{
+//   font-size:$default-size *2px;
+// }
+
+
+// funkcje kolorów w SASS
+
+// lighten --> rozjasnianie koloru
+// darken --. przyciemnianie
+/// mix --> mieszanie kolorów
+// $color-font:rgb(12,122,222);
+// $mix-color:#ee44ee;
+
+// .box{
+//   color: $color-font;
+//   h1{
+//     color: lighten($color-font,25%);
+//     border-bottom: 2px solid darken($color-font,10%);
+//     background-color: mix($color-font,$mix-color);
+//   }
+// }
+
+
+//  INSTRUKCJE WARUNKOWE SASS
+
+// $box-width:null;
+// p{
+//   @if($box-width){
+//     border-color: red;
+//   }
+//   @else if(){}
+//   @else{
+// border-color: purple;
+//   }
+// }
+
+// WŁASNE FUKCJE
+// @function nazwaFunkcji($param1,$param2){
+//   // body
+//   @return wartoscZwracana;
+// }
+
+// div{padding: nazwaFunkcji(10,10 );}
+
+$border-width:2px; 
+
+@function border-example(){
+  @return 20 * $border-width;
+}
+button{border-width: border-example();}

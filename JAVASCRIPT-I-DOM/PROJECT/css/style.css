@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form {
+  background-color: #ddd;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-shadow: 0 0 2px 1px gray;
+          box-shadow: 0 0 2px 1px gray;
+  margin: 20px 0;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form__title {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.form__input {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 15px 0;
+}
+.form__button {
+  margin: 30px 0;
+  padding: 10px 20px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  cursor: pointer;
+}
+
+.result, .content, .footer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content {
+  -webkit-box-shadow: 0 0 2px 1px #ddd;
+          box-shadow: 0 0 2px 1px #ddd;
+  margin: 20px auto;
+}
+.content * {
+  margin: 10px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000;
+  color: white;
+  height: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.result__info {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.result__element-info {
+  -webkit-box-shadow: 0 0 2px 1px red;
+          box-shadow: 0 0 2px 1px red;
+}/*# sourceMappingURL=style.css.map */

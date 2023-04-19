@@ -1,0 +1,98 @@
+body{
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: minmax(120px,200px) minmax(240px,1fr) 80px;
+  grid-template-rows: auto 1fr auto auto;
+grid-template-areas: 
+'logotype search hamburger'
+'gallery gallery gallery'
+'contact contact contact'
+'footerek footerek footerek';
+  // kontener
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  @media(min-width:1024px){
+    grid-template-columns:minmax(300px,auto) 1fr;
+    grid-template-rows: auto auto auto 1fr auto auto ;
+  grid-template-areas: 
+  "logotype gallery"
+"menu gallery"
+"search gallery"
+". gallery"
+"contact gallery"
+"footerek footerek";
+  }
+  &__logo{
+    // grid-column-start: 1;
+    // grid-column-end: 2;
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+    grid-area: logotype;
+    min-height: 100px;
+    background-color: red;
+    // @media(min-width:1024px){
+    //   grid-area: logotype;
+    // }
+  }
+
+  &__search{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: blue;
+    @media(min-width:1024px){
+      grid-area: search;
+      min-height: 80px;
+    }
+  }
+  &__menu{
+    grid-column: -1/-2;
+    grid-row: 1;
+    background-color: chocolate;
+    @media(min-width:1024px){
+      grid-area: menu;
+      min-height: 80px;
+    }
+  }
+  &__gallery{
+    // grid-column: 1/-1;
+    // grid-row: 2;
+    grid-area: gallery;
+
+    background-color: goldenrod;
+    place-self: stretch;
+    // kontener
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(205px,1fr));
+    padding: 120px 15px 15px;
+    gap: 15px; 
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+    }
+    h1{
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0,0,0,.3);
+    }
+  }
+  &__contact{
+    background-color: blueviolet;
+    grid-area: contact;
+    min-height: 60px;
+  }
+  &__footer{
+    grid-area: footerek;
+    background-color: aquamarine;
+    min-height: 100px;
+  }
+}

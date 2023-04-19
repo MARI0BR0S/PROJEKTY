@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) minmax(240px, 1fr) 80px;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas: "logotype search hamburger" "gallery gallery gallery" "contact contact contact" "footerek footerek footerek";
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-rows: auto auto auto 1fr auto auto;
+    grid-template-areas: "logotype gallery" "menu gallery" "search gallery" ". gallery" "contact gallery" "footerek footerek";
+  }
+}
+.grid__logo {
+  grid-area: logotype;
+  min-height: 100px;
+  background-color: red;
+}
+.grid__search {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-color: blue;
+}
+@media (min-width: 1024px) {
+  .grid__search {
+    grid-area: search;
+    min-height: 80px;
+  }
+}
+.grid__menu {
+  grid-column: -1/-2;
+  grid-row: 1;
+  background-color: chocolate;
+}
+@media (min-width: 1024px) {
+  .grid__menu {
+    grid-area: menu;
+    min-height: 80px;
+  }
+}
+.grid__gallery {
+  grid-area: gallery;
+  background-color: goldenrod;
+  place-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  padding: 120px 15px 15px;
+  gap: 15px;
+  position: relative;
+}
+.grid__gallery img {
+  display: block;
+  width: 100%;
+}
+.grid__gallery h1 {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.grid__contact {
+  background-color: blueviolet;
+  grid-area: contact;
+  min-height: 60px;
+}
+.grid__footer {
+  grid-area: footerek;
+  background-color: aquamarine;
+  min-height: 100px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  text-align: center;
+}
+section p {
+  max-width: 75%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 16px auto;
+}
+img {
+  max-width: 100%;
+}
